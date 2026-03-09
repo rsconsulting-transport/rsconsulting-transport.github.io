@@ -35,7 +35,6 @@
       --muted:#64748b;
       --line:#dce6f1;
       --shadow:0 14px 34px rgba(11,35,66,.08);
-      --shadow-soft:0 8px 20px rgba(11,35,66,.05);
       --max:1180px;
       --radius:24px;
     }
@@ -63,7 +62,7 @@
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(255,255,255,0.86);
+      background:rgba(255,255,255,.82);
       backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(15,76,151,.08);
       box-shadow:0 6px 20px rgba(0,0,0,.05);
@@ -226,12 +225,9 @@
 
     .hero-brand-logo{
       display:block;
-      width:auto;
-      height:140px;
-      max-width:100%;
-      margin:0 0 24px;
-      object-fit:contain;
-      object-position:left center;
+      width:100%;
+      max-width:1000px;
+      margin:0 auto 30px auto;
     }
 
     .hero-subtitle{
@@ -241,6 +237,7 @@
       color:rgba(255,255,255,.82);
       margin-bottom:14px;
       font-weight:700;
+      text-align:center;
     }
 
     .hero-badge{
@@ -255,7 +252,11 @@
       font-weight:700;
       letter-spacing:.04em;
       text-transform:uppercase;
-      margin-bottom:22px;
+      margin:0 auto 22px;
+    }
+
+    .hero-badge-wrap{
+      text-align:center;
     }
 
     .hero p{
@@ -305,7 +306,8 @@
     .box,
     .accordion-card,
     .contact-box,
-    .form-box{
+    .form-box,
+    .text-section{
       background:#fff;
       border:1px solid var(--line);
       border-radius:var(--radius);
@@ -489,10 +491,6 @@
     }
 
     .text-section{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
       padding:30px 26px;
     }
 
@@ -739,8 +737,9 @@
       }
 
       .hero-brand-logo{
-        height:90px;
-        margin-bottom:18px;
+        width:90%;
+        max-width:none;
+        margin:0 auto 20px auto;
       }
 
       .hero-subtitle{
@@ -843,10 +842,12 @@
                 Independent Transport Consulting
               </div>
 
-              <span class="hero-badge">
-                <i class="fa-solid fa-road"></i>
-                <span data-i18n="hero_badge">TRANSPORT · RECRUITING · NETZWERK</span>
-              </span>
+              <div class="hero-badge-wrap">
+                <span class="hero-badge">
+                  <i class="fa-solid fa-road"></i>
+                  <span data-i18n="hero_badge">TRANSPORT · RECRUITING · NETZWERK</span>
+                </span>
+              </div>
 
               <p data-i18n="hero_text">
                 Wir unterstützen Transportunternehmen bei <strong>Fahrer Recruiting</strong>, Netzwerkaufbau und pragmatischen Lösungen im operativen Alltag.
@@ -1113,8 +1114,8 @@
       <div class="container">
         <div class="text-section">
           <h2 data-i18n="regions_title">Regionen</h2>
-          <p data-i18n="regions_p1">Deutschlandweit tätig.</p>
-          <p data-i18n="regions_p2">Wir arbeiten mit Transportunternehmen in ganz Deutschland zusammen.</p>
+          <p data-i18n="regions_p1">Wir arbeiten mit Transportunternehmen in ganz Deutschland sowie in ganz Polen.</p>
+          <p data-i18n="regions_p2">Unsere Zusammenarbeit ist sowohl deutschlandweit als auch in ganz Polen möglich.</p>
           <p data-i18n="regions_p3">Operative Unterstützung vor Ort bieten wir insbesondere in Berlin, Leipzig und Dresden.</p>
           <p data-i18n="regions_p4">Weitere Projekte sind deutschlandweit sowie in Polen grundsätzlich möglich.</p>
         </div>
@@ -1136,6 +1137,16 @@
             </button>
             <div class="faq-answer" data-i18n="faq1_a">
               Das hängt von Profil, Region und aktueller Verfügbarkeit ab. In einem ersten Gespräch klären wir realistisch, welche Optionen kurzfristig sinnvoll sind.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq_cost_q">Wie viel kostet ein Fahrer?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" data-i18n="faq_cost_a">
+              Die Kosten eines Fahrers hängen vom Arbeitssystem, vom Standort sowie von der Art der Tätigkeit ab. Weitere Informationen können wir nach einem kurzen Vorgespräch geben.
             </div>
           </div>
 
@@ -1447,8 +1458,8 @@
         for4_text:"Für Betriebe, die Transportstrukturen gerade aufbauen oder erweitern.",
 
         regions_title:"Regionen",
-        regions_p1:"Deutschlandweit tätig.",
-        regions_p2:"Wir arbeiten mit Transportunternehmen in ganz Deutschland zusammen.",
+        regions_p1:"Wir arbeiten mit Transportunternehmen in ganz Deutschland sowie in ganz Polen.",
+        regions_p2:"Unsere Zusammenarbeit ist sowohl deutschlandweit als auch in ganz Polen möglich.",
         regions_p3:"Operative Unterstützung vor Ort bieten wir insbesondere in Berlin, Leipzig und Dresden.",
         regions_p4:"Weitere Projekte sind deutschlandweit sowie in Polen grundsätzlich möglich.",
 
@@ -1456,6 +1467,8 @@
         faq_text:"Kurze Antworten auf typische Fragen rund um unsere Zusammenarbeit.",
         faq1_q:"Wie schnell können Fahrer gefunden werden?",
         faq1_a:"Das hängt von Profil, Region und aktueller Verfügbarkeit ab. In einem ersten Gespräch klären wir realistisch, welche Optionen kurzfristig sinnvoll sind.",
+        faq_cost_q:"Wie viel kostet ein Fahrer?",
+        faq_cost_a:"Die Kosten eines Fahrers hängen vom Arbeitssystem, vom Standort sowie von der Art der Tätigkeit ab. Weitere Informationen können wir nach einem kurzen Vorgespräch geben.",
         faq2_q:"Arbeiten Sie deutschlandweit?",
         faq2_a:"Ja. Wir arbeiten mit Unternehmen in ganz Deutschland. Operative Projekte vor Ort übernehmen wir besonders flexibel im Raum Berlin, Leipzig und Dresden.",
         faq3_q:"Unterstützen Sie auch bei operativen Themen?",
@@ -1583,8 +1596,8 @@
         for4_text:"Dla przedsiębiorstw, które budują lub rozwijają swoje struktury transportowe.",
 
         regions_title:"Regiony",
-        regions_p1:"Działamy na terenie całych Niemiec.",
-        regions_p2:"Współpracujemy z firmami transportowymi w całych Niemczech.",
+        regions_p1:"Współpracujemy z przedsiębiorstwami transportowymi na terenie całych Niemiec oraz całej Polski.",
+        regions_p2:"Nasza współpraca jest możliwa zarówno w całych Niemczech, jak i w całej Polsce.",
         regions_p3:"Wsparcie operacyjne na miejscu oferujemy szczególnie w Berlinie, Lipsku i Dreźnie.",
         regions_p4:"Dalsze projekty są możliwe na terenie całych Niemiec oraz w Polsce.",
 
@@ -1592,6 +1605,8 @@
         faq_text:"Krótkie odpowiedzi na typowe pytania dotyczące współpracy.",
         faq1_q:"Jak szybko można znaleźć kierowców?",
         faq1_a:"To zależy od profilu, regionu i aktualnej dostępności. Na pierwszej rozmowie realistycznie określamy możliwe opcje.",
+        faq_cost_q:"Ile kosztuje kierowca?",
+        faq_cost_a:"Koszt kierowcy uzależniony jest od systemu pracy, lokalizacji oraz charakteru wykonywanej pracy. Więcej informacji możemy podać po krótkiej wstępnej rozmowie.",
         faq2_q:"Czy działacie na terenie całych Niemiec?",
         faq2_a:"Tak. Współpracujemy z firmami w całych Niemczech. Projekty operacyjne najelastyczniej realizujemy w Berlinie, Lipsku i Dreźnie.",
         faq3_q:"Czy wspieracie też operacyjnie?",
@@ -1719,8 +1734,8 @@
         for4_text:"For businesses building or expanding transport structures.",
 
         regions_title:"Regions",
-        regions_p1:"Active throughout Germany.",
-        regions_p2:"We work with transport companies across all of Germany.",
+        regions_p1:"We work with transport companies throughout Germany and throughout Poland.",
+        regions_p2:"Our cooperation is possible both across Germany and across all of Poland.",
         regions_p3:"On-site operational support is offered especially in Berlin, Leipzig and Dresden.",
         regions_p4:"Further projects are also possible throughout Germany and in Poland.",
 
@@ -1728,6 +1743,8 @@
         faq_text:"Short answers to typical questions about working with us.",
         faq1_q:"How quickly can drivers be found?",
         faq1_a:"It depends on the profile, region and current availability. In a first conversation we realistically assess which options make sense.",
+        faq_cost_q:"How much does a driver cost?",
+        faq_cost_a:"The cost of a driver depends on the working system, the location and the type of work performed. We can provide more detailed information after a short initial conversation.",
         faq2_q:"Do you work throughout Germany?",
         faq2_a:"Yes. We work with companies across Germany. We are especially flexible for on-site projects in Berlin, Leipzig and Dresden.",
         faq3_q:"Do you also support operational topics?",
@@ -1795,4 +1812,4 @@
     initDefaultCards();
   </script>
 </body>
-  </html>
+</html>
