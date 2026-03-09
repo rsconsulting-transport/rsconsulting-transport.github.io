@@ -64,41 +64,41 @@
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(255,255,255,0.85);
+      background:rgba(255,255,255,0.82);
       backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(15,76,151,.08);
-      box-shadow:0 6px 20px rgba(0,0,0,.06);
+      box-shadow:0 6px 20px rgba(0,0,0,.05);
     }
 
     .top-controls{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:22px;
-      padding:16px 22px;
-      min-height:160px;
+      gap:18px;
+      padding:10px 18px;
+      min-height:78px;
       background:transparent;
     }
 
     .left-head{
       display:flex;
       align-items:center;
-      gap:18px;
+      gap:14px;
       flex:1;
       min-width:0;
     }
 
     .hamburger{
-      width:48px;
-      height:48px;
+      width:42px;
+      height:42px;
       border:none;
-      border-radius:14px;
+      border-radius:12px;
       background:linear-gradient(135deg,var(--blue),var(--blue2));
       color:#fff;
-      font-size:18px;
+      font-size:16px;
       cursor:pointer;
       flex:0 0 auto;
-      box-shadow:0 8px 18px rgba(15,76,151,.16);
+      box-shadow:0 8px 18px rgba(15,76,151,.14);
     }
 
     .header-logo{
@@ -106,12 +106,12 @@
       min-width:0;
       display:flex;
       align-items:center;
-      overflow:visible;
+      overflow:hidden;
     }
 
     .header-logo img{
       width:auto;
-      height:220px;
+      height:60px;
       max-width:none;
       object-fit:contain;
       object-position:left center;
@@ -127,14 +127,14 @@
 
     .lang-btn{
       border:1px solid var(--line);
-      background:rgba(255,255,255,.92);
+      background:rgba(255,255,255,.94);
       color:var(--muted);
       border-radius:12px;
-      padding:9px 12px;
-      font-size:13px;
+      padding:8px 11px;
+      font-size:12px;
       font-weight:700;
       cursor:pointer;
-      min-width:56px;
+      min-width:50px;
       box-shadow:0 4px 12px rgba(11,35,66,.04);
     }
 
@@ -151,7 +151,7 @@
       gap:8px;
       flex-wrap:nowrap;
       overflow-x:auto;
-      padding:0 12px 12px;
+      padding:0 12px 10px;
       -webkit-overflow-scrolling:touch;
     }
 
@@ -161,19 +161,19 @@
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding:10px 12px;
-      border-radius:14px;
-      background:rgba(255,255,255,.92);
+      padding:8px 11px;
+      border-radius:12px;
+      background:rgba(255,255,255,.94);
       border:1px solid var(--line);
       font-weight:700;
-      font-size:14px;
+      font-size:13px;
       white-space:nowrap;
       flex:0 0 auto;
       box-shadow:0 4px 12px rgba(11,35,66,.04);
     }
 
     .quick-link i{
-      font-size:18px;
+      font-size:15px;
       flex:0 0 auto;
     }
 
@@ -200,7 +200,7 @@
     }
 
     .hero{
-      padding:20px 0 14px;
+      padding:24px 0 14px;
     }
 
     .hero-wrap{
@@ -219,14 +219,15 @@
     }
 
     .hero-copy{
-      padding:72px 40px;
+      padding:58px 40px;
     }
 
     .hero-brand-logo{
-      height:88px;
+      height:210px;
       width:auto;
       object-fit:contain;
-      margin:0 0 18px;
+      margin:0 0 12px;
+      max-width:100%;
     }
 
     .hero-subtitle{
@@ -705,6 +706,9 @@
       .inner-grid{
         grid-template-columns:1fr;
       }
+      .hero-brand-logo{
+        height:150px;
+      }
     }
 
     @media (max-width:760px){
@@ -712,39 +716,53 @@
         padding:10px 14px;
         min-height:auto;
       }
+
       .header-logo img{
         width:auto;
-        height:82px;
-        transform:none;
+        height:52px;
       }
+
+      .hamburger{
+        width:40px;
+        height:40px;
+      }
+
       .hero-copy{
         padding:42px 24px;
       }
+
       .hero-brand-logo{
-        height:72px;
+        height:90px;
       }
+
       .hero p{
         font-size:18px;
       }
+
       .hero-side{
         padding:0 24px 24px;
       }
+
       .action-grid,
       .inner-grid{
         grid-template-columns:1fr;
       }
+
       .action-btn{
         font-size:17px;
       }
+
       .lang-switch{
         display:flex;
         flex-direction:row;
         gap:6px;
       }
+
       .lang-btn{
-        min-width:52px;
-        padding:8px 10px;
+        min-width:48px;
+        padding:8px 9px;
       }
+
       .text-section{
         padding:24px 20px;
       }
