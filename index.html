@@ -73,8 +73,8 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:12px;
-      padding:10px 14px;
+      gap:18px;
+      padding:14px 18px;
       background:#fff;
     }
 
@@ -99,21 +99,20 @@
     }
 
     .header-logo{
-      flex:1;
+      flex:0 0 auto;
       min-width:0;
       display:flex;
       align-items:center;
-      overflow:hidden;
+      overflow:visible;
     }
 
     .header-logo img{
-      width:100%;
+      width:auto;
+      height:118px;
       max-width:none;
-      height:70px;
       object-fit:contain;
       object-position:left center;
-      transform:scale(1.3);
-      transform-origin:left center;
+      transform:none;
     }
 
     .lang-switch{
@@ -506,7 +505,7 @@
     }
 
     .problem-list{
-      margin:0;
+      margin:0 0 14px;
       padding-left:22px;
     }
 
@@ -719,10 +718,9 @@
     @media (max-width:760px){
       .top-controls{padding:10px 14px}
       .header-logo img{
-        width:100%;
+        width:auto;
         height:78px;
-        transform:scale(1.45);
-        transform-origin:left center;
+        transform:none;
       }
       .hero-copy{
         padding:42px 24px;
@@ -980,15 +978,12 @@
       <div class="container">
         <div class="text-section">
           <h2 data-i18n="problems_title">Typische Probleme in der Transportbranche</h2>
-          <p data-i18n="problems_intro">Viele Transportunternehmen kämpfen mit ähnlichen Herausforderungen:</p>
-          <ul class="problem-list">
-            <li data-i18n="problems_l1">Fahrermangel</li>
-            <li data-i18n="problems_l2">kurzfristige Ausfälle</li>
-            <li data-i18n="problems_l3">Sprachbarrieren</li>
-            <li data-i18n="problems_l4">organisatorische Probleme im Alltag</li>
-            <li data-i18n="problems_l5">fehlende Kontakte zu zuverlässigen Fahrern</li>
-          </ul>
-          <p data-i18n="problems_outro">Wir kennen diese Situationen aus der Praxis und unterstützen Unternehmen mit pragmatischen Lösungen.</p>
+          <p data-i18n="problems_p1">Viele Transportunternehmen stehen im Alltag vor ähnlichen Herausforderungen.</p>
+          <p data-i18n="problems_p2">Der Mangel an zuverlässigen Fahrern, kurzfristige Ausfälle oder sprachliche Barrieren können den operativen Ablauf erheblich erschweren.</p>
+          <p data-i18n="problems_p3">Hinzu kommen organisatorische Probleme, hoher Zeitdruck sowie fehlende Kontakte zu geeigneten Fahrern oder Partnern in der Branche.</p>
+          <p data-i18n="problems_p4">Oft fehlt im Tagesgeschäft schlicht die Zeit, sich strukturiert mit Recruiting oder dem Aufbau eines Netzwerks zu beschäftigen.</p>
+          <p data-i18n="problems_p5">Genau an diesem Punkt setzen wir an.</p>
+          <p data-i18n="problems_p6">Wir unterstützen Transportunternehmen dabei, praktische Lösungen zu finden und schnell umsetzbare Wege zu entwickeln.</p>
         </div>
       </div>
     </section>
@@ -1008,10 +1003,18 @@
       <div class="container">
         <div class="section-header">
           <h2 data-i18n="work_title">Wie wir arbeiten</h2>
-          <p data-i18n="work_text">Ein klarer, praxisnaher Ablauf – von der ersten Einschätzung bis zur Umsetzung.</p>
+          <p data-i18n="work_text">Ein klarer, praxisnaher Ablauf – vom ersten Gespräch bis zur Umsetzung.</p>
         </div>
 
         <div class="grid-small">
+          <div class="accordion-card open">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <h3 data-i18n="work0_title">Erstkontakt</h3>
+              <p data-i18n="work0_text">Kurzes Gespräch, um Bedarf und Situation zu verstehen.</p>
+            </div>
+          </div>
+
           <div class="accordion-card open">
             <div class="accordion-head">
               <div class="icon"><i class="fa-solid fa-comments"></i></div>
@@ -1204,7 +1207,7 @@
           <p data-i18n="analysis_text">Beantworten Sie kurz ein paar Fragen – wir melden uns zeitnah. 100% vertraulich.</p>
         </div>
 
-        <div class="box">
+        <div class="box" style="padding:28px 24px;">
           <form action="https://formspree.io/f/xwvrpdaw" method="POST">
             <input type="hidden" name="formularz_typ" value="Erst-Analyse">
 
@@ -1385,13 +1388,12 @@
         card3_b3:"Reduzierung unnötiger Belastungen.",
 
         problems_title:"Typische Probleme in der Transportbranche",
-        problems_intro:"Viele Transportunternehmen kämpfen mit ähnlichen Herausforderungen:",
-        problems_l1:"Fahrermangel",
-        problems_l2:"kurzfristige Ausfälle",
-        problems_l3:"Sprachbarrieren",
-        problems_l4:"organisatorische Probleme im Alltag",
-        problems_l5:"fehlende Kontakte zu zuverlässigen Fahrern",
-        problems_outro:"Wir kennen diese Situationen aus der Praxis und unterstützen Unternehmen mit pragmatischen Lösungen.",
+        problems_p1:"Viele Transportunternehmen stehen im Alltag vor ähnlichen Herausforderungen.",
+        problems_p2:"Der Mangel an zuverlässigen Fahrern, kurzfristige Ausfälle oder sprachliche Barrieren können den operativen Ablauf erheblich erschweren.",
+        problems_p3:"Hinzu kommen organisatorische Probleme, hoher Zeitdruck sowie fehlende Kontakte zu geeigneten Fahrern oder Partnern in der Branche.",
+        problems_p4:"Oft fehlt im Tagesgeschäft schlicht die Zeit, sich strukturiert mit Recruiting oder dem Aufbau eines Netzwerks zu beschäftigen.",
+        problems_p5:"Genau an diesem Punkt setzen wir an.",
+        problems_p6:"Wir unterstützen Transportunternehmen dabei, praktische Lösungen zu finden und schnell umsetzbare Wege zu entwickeln.",
 
         principle_title:"Unser Prinzip",
         principle_p1:"Wir arbeiten pragmatisch, direkt und ohne unnötige Komplexität.",
@@ -1399,7 +1401,9 @@
         principle_p3:"Durch unser Netzwerk und unsere Erfahrung in der Branche können wir schnell Verbindungen herstellen und Probleme effizient lösen.",
 
         work_title:"Wie wir arbeiten",
-        work_text:"Ein klarer, praxisnaher Ablauf – von der ersten Einschätzung bis zur Umsetzung.",
+        work_text:"Ein klarer, praxisnaher Ablauf – vom ersten Gespräch bis zur Umsetzung.",
+        work0_title:"Erstkontakt",
+        work0_text:"Kurzes Gespräch, um Bedarf und Situation zu verstehen.",
         work1_title:"Analyse",
         work1_text:"Wir verstehen zuerst Ihre Situation.",
         work2_title:"Lösung",
@@ -1520,13 +1524,12 @@
         card3_b3:"Ograniczanie niepotrzebnych obciążeń.",
 
         problems_title:"Typowe problemy w branży transportowej",
-        problems_intro:"Wiele firm transportowych mierzy się z podobnymi wyzwaniami:",
-        problems_l1:"brak kierowców",
-        problems_l2:"nagłe braki i absencje",
-        problems_l3:"bariery językowe",
-        problems_l4:"problemy organizacyjne w codziennym działaniu",
-        problems_l5:"brak kontaktów do rzetelnych kierowców",
-        problems_outro:"Znamy te sytuacje z praktyki i wspieramy firmy pragmatycznymi rozwiązaniami.",
+        problems_p1:"Wiele firm transportowych mierzy się na co dzień z podobnymi wyzwaniami.",
+        problems_p2:"Brak rzetelnych kierowców, nagłe absencje czy bariery językowe mogą istotnie utrudniać bieżące funkcjonowanie operacyjne.",
+        problems_p3:"Do tego dochodzą problemy organizacyjne, duża presja czasu oraz brak kontaktów do odpowiednich kierowców lub partnerów w branży.",
+        problems_p4:"W codziennym działaniu często po prostu brakuje czasu, aby w uporządkowany sposób zająć się rekrutacją albo budowaniem sieci kontaktów.",
+        problems_p5:"Właśnie w tym miejscu wchodzimy my.",
+        problems_p6:"Wspieramy firmy transportowe w znajdowaniu praktycznych rozwiązań i tworzeniu dróg, które można szybko wdrożyć.",
 
         principle_title:"Nasza zasada",
         principle_p1:"Pracujemy pragmatycznie, bezpośrednio i bez zbędnej komplikacji.",
@@ -1534,7 +1537,9 @@
         principle_p3:"Dzięki naszej sieci kontaktów i doświadczeniu w branży możemy szybko łączyć ludzi i skutecznie rozwiązywać problemy.",
 
         work_title:"Jak pracujemy",
-        work_text:"Jasny i praktyczny proces – od pierwszej oceny do wdrożenia.",
+        work_text:"Jasny i praktyczny proces – od pierwszej rozmowy do wdrożenia.",
+        work0_title:"Pierwszy kontakt",
+        work0_text:"Krótka rozmowa, żeby zrozumieć potrzebę i sytuację.",
         work1_title:"Analiza",
         work1_text:"Najpierw rozumiemy Twoją sytuację.",
         work2_title:"Rozwiązanie",
@@ -1655,13 +1660,12 @@
         card3_b3:"Reducing unnecessary burdens.",
 
         problems_title:"Typical problems in the transport industry",
-        problems_intro:"Many transport companies face similar challenges:",
-        problems_l1:"driver shortages",
-        problems_l2:"short-term absences",
-        problems_l3:"language barriers",
-        problems_l4:"organisational problems in daily operations",
-        problems_l5:"lack of contacts to reliable drivers",
-        problems_outro:"We know these situations from practice and support companies with pragmatic solutions.",
+        problems_p1:"Many transport companies face similar challenges in daily operations.",
+        problems_p2:"A shortage of reliable drivers, short-term absences or language barriers can significantly complicate operational processes.",
+        problems_p3:"This is often combined with organisational problems, high time pressure and a lack of contacts to suitable drivers or industry partners.",
+        problems_p4:"In daily business, there is often simply not enough time to deal in a structured way with recruiting or building a network.",
+        problems_p5:"This is exactly where we come in.",
+        problems_p6:"We support transport companies in finding practical solutions and developing ways that can be implemented quickly.",
 
         principle_title:"Our principle",
         principle_p1:"We work pragmatically, directly and without unnecessary complexity.",
@@ -1669,7 +1673,9 @@
         principle_p3:"Through our network and industry experience, we can quickly connect people and solve problems efficiently.",
 
         work_title:"How we work",
-        work_text:"A clear, practical process – from first assessment to implementation.",
+        work_text:"A clear, practical process – from the first conversation to implementation.",
+        work0_title:"Initial contact",
+        work0_text:"A short conversation to understand the need and situation.",
         work1_title:"Analysis",
         work1_text:"We first understand your situation.",
         work2_title:"Solution",
@@ -1756,6 +1762,13 @@
     if(savedLang && window.translations[savedLang]){
       setLang(savedLang);
     }
+
+    function initDefaultCards() {
+      document.querySelectorAll('.accordion-card.open .accordion-body').forEach(body => {
+        body.style.display = 'block';
+      });
+    }
+    initDefaultCards();
   </script>
 </body>
-          </html>
+</html>
